@@ -1,0 +1,162 @@
+/* DataTable.module.css — styles scoped to DataTable component */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #3a3a3a;
+}
+
+.table {
+  width: 100%;
+  min-width: max-content;
+  border-collapse: collapse;
+}
+
+.theadRow {
+  background: #1a1a1a;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  white-space: nowrap;
+}
+
+.thSortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease;
+}
+
+.thSortable:hover {
+  color: #fff;
+}
+
+.thInner {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.sortIcon {
+  color: #555;
+  display: inline-flex;
+}
+
+.tbody {
+  border: none;
+}
+
+.tbody tr + tr {
+  border-top: 1px solid #3a3a3a;
+}
+
+.row {
+  transition: background 0.15s ease;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #555;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pageArrow {
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.pageArrow:hover:not(:disabled) {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pageArrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pageBtn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.pageBtn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pageBtnActive {
+  background: #ffd700;
+  color: #000;
+  font-weight: 700;
+}
+
+.pageBtnActive:hover {
+  color: #000;
+  background: #ffd700;
+}
+
+.ellipsis {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 0.875rem;
+}

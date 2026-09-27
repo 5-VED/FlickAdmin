@@ -1,0 +1,56 @@
+/* StatusBadge.module.css — styles scoped to StatusBadge component */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 5px 0.625rem;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* Color variants — mirrors previous Tailwind CONFIG */
+.green {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+}
+.green .dot { background: #34d399; }
+
+.red {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+}
+.red .dot { background: #f87171; }
+
+.blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+.blue .dot { background: #60a5fa; }
+
+.yellow {
+  background: rgba(255, 215, 0, 0.1);
+  color: #ffd700;
+}
+.yellow .dot { background: #ffd700; }
+
+.gray {
+  background: rgba(255, 255, 255, 0.05);
+  color: #888;
+}
+.gray .dot { background: #888; }
+
+.muted {
+  background: rgba(85, 85, 85, 0.2);
+  color: #888;
+}
+.muted .dot { background: #555; }

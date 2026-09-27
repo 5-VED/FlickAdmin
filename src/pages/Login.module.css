@@ -1,0 +1,120 @@
+/* Login.module.css — styles scoped to Login page */
+
+.screen {
+  min-height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.box { width: 100%; max-width: 28rem; }
+
+.brand { text-align: center; margin-bottom: 2rem; }
+
+.brandRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.brandName {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.25rem;
+  color: #ffd700;
+  letter-spacing: 0.1em;
+}
+
+.brandSub { color: #888; font-size: 0.875rem; margin: 0; }
+
+.card {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.cardTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin: 0 0 1.5rem;
+  font-weight: 400;
+}
+
+.form { display: flex; flex-direction: column; gap: 1rem; }
+
+.inputLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0 0 0.375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.textInput {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.textInput::placeholder { color: #444; }
+.textInput:focus { border-color: rgba(255, 215, 0, 0.6); }
+
+.errorBox {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.errorText { color: #f87171; font-size: 0.875rem; margin: 0; }
+
+.submitBtn {
+  width: 100%;
+  padding: 0.875rem;
+  background: #ffd700;
+  color: #000;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  border-radius: 0.75rem;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submitBtn:hover:not(:disabled) { background: #e6c200; }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-color: #000;
+  border-radius: 999px;
+  animation: login-spin 0.8s linear infinite;
+}
+
+.demo { color: #555; font-size: 0.75rem; text-align: center; margin: 1.5rem 0 0; }
+
+@keyframes login-spin {
+  to { transform: rotate(360deg); }
+}

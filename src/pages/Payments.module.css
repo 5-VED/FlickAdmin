@@ -1,0 +1,163 @@
+/* Payments.module.css — styles scoped to Payments page */
+
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.summaryGrid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+
+@media (min-width: 768px) {
+  .summaryGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.summaryCard {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.summaryCard:hover { border-color: rgba(255, 215, 0, 0.2); }
+
+.summaryIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.iconYellow { background: rgba(255, 215, 0, 0.1); color: #ffd700; }
+.iconOrange { background: rgba(249, 115, 22, 0.1); color: #fb923c; }
+.iconGreen { background: rgba(16, 185, 129, 0.1); color: #34d399; }
+
+.summaryLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin: 0 0 0.25rem;
+}
+
+.summaryValue {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.875rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.valueYellow { color: #ffd700; }
+.valueOrange { color: #fb923c; }
+.valueGreen { color: #34d399; }
+
+.summarySub { color: #555; font-size: 0.75rem; margin: 0.5rem 0 0; }
+
+.panel {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.panelTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.panelHead .panelTitle { margin: 0; }
+
+.headActions { display: flex; align-items: center; gap: 0.75rem; }
+
+.select {
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.select:focus { border-color: #ffd700; }
+
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3a3a3a;
+  background: transparent;
+  color: #888;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.exportBtn:hover { color: #ffd700; border-color: rgba(255, 215, 0, 0.4); }
+
+.tooltip {
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tooltipLabel {
+  font-family: 'Bebas Neue', cursive;
+  color: #ffd700;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin: 0 0 0.5rem;
+}
+
+.cellStrong { font-weight: 600; color: #fff; }
+.cellMoney { color: #34d399; font-weight: 600; }
+.cellDate { color: #888; font-size: 0.75rem; }
+
+.payBtn {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgba(255, 215, 0, 0.1);
+  color: #ffd700;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+tr:hover .payBtn { opacity: 1; }
+
+.payBtn:hover { background: rgba(255, 215, 0, 0.2); }
+
+.paidLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #34d399;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+tr:hover .paidLabel { opacity: 1; }
